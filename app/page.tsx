@@ -1,33 +1,44 @@
-import AcmeLogo from '@/app/ui/acme-logo';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col p-6">
-      <div className="flex h-20 shrink-0 items-end rounded-lg bg-blue-500 p-4 md:h-52">
-        {/* <AcmeLogo /> */}
-      </div>
-      <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
-        <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
-          <p className={`text-xl text-gray-800 md:text-3xl md:leading-normal`}>
-            <strong>Welcome to Acme.</strong> This is the example for the{' '}
-            <a href="https://nextjs.org/learn/" className="text-blue-500">
-              Next.js Learn Course
-            </a>
-            , brought to you by Vercel.
+    <main className="bg-light-background text-light-text dark:bg-dark-background dark:text-dark-text flex min-h-screen flex-col px-4 md:px-8 xl:px-16">
+      <div className="h-20 w-full"></div>
+      <div className="mx-auto flex max-w-[1020px] flex-col rounded-e-2xl">
+        <div className="flex flex-col items-center justify-center">
+          <h1 className="text-center text-[32px] md:text-[48px] lg:text-[72px]">
+            The ultimate NextJS invoice web app.
+            <span className="font-bold">
+              Track your customers and invoices all in one site.
+            </span>
+          </h1>
+          <p className="mx-auto mt-4 max-w-[620px] text-center text-base md:mt-2 md:text-lg">
+            Create new customers, add invoices, adimin and track according to
+            your own workflow, access in any device. Your data is secure by a
+            good provider like vercel.
           </p>
-          <Link
-            href="/login"
-            className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
-          >
-            <span>Log in</span> <ArrowRightIcon className="w-5 md:w-6" />
-          </Link>
+          <div className="mt-8 flex gap-4">
+            <Link
+              href="/login"
+              className="bg-light-forebackground dark:bg-dark-forebackground rounded-xl px-4 py-2"
+            >
+              New account
+            </Link>
+            <Link
+              href="/create-a-count"
+              className="bg-light-forebackground dark:bg-dark-forebackground rounded-xl px-4 py-2"
+            >
+              Login
+            </Link>
+          </div>
         </div>
-        <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
-          {/* Add Hero Images Here */}
+        <div className="relative">
+          <div className="mt-12 aspect-video w-full rounded-xl bg-slate-400"></div>
+          <div className="absolute -left-24 top-0 mt-12 h-40 w-40 -rotate-[25deg] rounded-xl bg-slate-400 shadow"></div>
+          <div className="absolute -right-8 top-7 mt-12 h-40 w-64 rotate-[24deg] rounded-xl bg-slate-400 shadow"></div>
         </div>
       </div>
+      <div className="h-screen"></div>
     </main>
   );
 }

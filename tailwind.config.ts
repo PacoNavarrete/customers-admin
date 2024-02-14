@@ -12,11 +12,12 @@ const config: Config = {
         '13': 'repeat(13, minmax(0, 1fr))',
       },
       colors: {
-        blue: {
-          400: '#2589FE',
-          500: '#0070F3',
-          600: '#2F6FEB',
-        },
+        'light-background': 'hsl(0 0% 100%)',
+        'light-forebackground': 'hsl(240 5.9% 90%)',
+        'light-text': 'hsl(240 10% 3.9%)',
+        'dark-background': 'hsl(222.2 84% 4.9%)',
+        'dark-forebackground': 'hsl(217.2 32.6% 17.5%)',
+        'dark-text': 'hsl(210 40% 98%)',
       },
     },
     keyframes: {
